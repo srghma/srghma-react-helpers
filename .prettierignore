@@ -9,3 +9,5 @@
 /.idea
 /yarn-error.log
 
+package-lock.json
+package.json

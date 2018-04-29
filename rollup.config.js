@@ -27,13 +27,13 @@ const config = {
   external: id => id.match(peerDependenciesRegex),
   plugins:  [
     babel({
-      babelrc:        false,
-      // externalHelpers: true,
-      runtimeHelpers: true,
-      exclude:        'node_modules/**',
-      presets:        [
+      babelrc:         false,
+      externalHelpers: true,
+      // runtimeHelpers: true,
+      exclude:         'node_modules/**',
+      presets:         [
         [
-          'env',
+          '@babel/env',
           {
             modules:            false,
             forceAllTransforms: true,
@@ -41,8 +41,8 @@ const config = {
         ],
       ],
       plugins: [
-        // 'external-helpers',
-        'transform-runtime',
+        '@babel/plugin-external-helpers',
+        // 'transform-runtime',
         ...babelrc.plugins,
       ],
     }),

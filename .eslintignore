@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+package-lock.json
+package.json
+.DS_Store
+
+build/
+dev/
+
+*.zip
+*.crx
+*.pem
+update.xml
+
+es
+umd
+cjs

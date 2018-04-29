@@ -1,15 +1,5 @@
 {
-  "presets": [
-    ["env", {
-      "debug": false,
-      "modules": "commonjs",
-      "targets": {
-        "node": "current"
-      },
-      "useBuiltIns": true,
-      "externalHelpers": true
-    }]
-  ],
+  "presets": [ "@babel/env" ],
   "plugins": [
     ["lodash", {
       "id": ["ramda", "ramda-adjunct", "recompose"]
