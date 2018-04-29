@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["env", {
+      "debug": false,
+      "modules": "commonjs",
+      "targets": {
+        "node": "current"
+      },
+      "useBuiltIns": true,
+      "externalHelpers": true
+    }]
+  ],
+  "plugins": [
+    ["lodash", {
+      "id": ["ramda", "ramda-adjunct", "recompose"]
+    }]
+  ]
+}

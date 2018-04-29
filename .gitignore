@@ -1,0 +1,10 @@
+/es
+/umd
+/cjs
+/node_modules
+/npm-debug.log
+/typings
+/.rpt2_cache
+/.vscode
+/.idea
+/yarn-error.log
