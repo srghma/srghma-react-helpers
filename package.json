@@ -1,6 +1,6 @@
 {
   "name": "srghma-react-helpers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "Sergey Homa <srghma@gmail.com>",
   "files": [
@@ -16,7 +16,9 @@
     "prebuild": "npm run clean",
     "prepublishOnly": "npm run build",
     "precommit": "lint-staged",
-    "build": "rollup -c",
+    "build": "npm run build:es && npm run build:commonjs",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir cjs",
     "clean": "rimraf es/ cjs/ umd/",
     "lint": "eslint --ignore-path .eslintignore .",
     "lint:fix": "eslint --ignore-path .eslintignore --fix .",
@@ -36,15 +38,18 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",
     "@babel/helper-annotate-as-pure": "^7.0.0-beta.46",
     "@babel/plugin-external-helpers": "^7.0.0-beta.46",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@team-griffin/install-self-peers": "^1.1.1",
     "babel-eslint": "^8.0.3",
     "babel-jest": "^22.4.3",
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-module-resolver": "^3.1.1",
+    "cross-env": "^5.1.4",
     "eslint": "^4.13.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^12.0.0-alpha.0",
