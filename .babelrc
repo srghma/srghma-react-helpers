@@ -1,8 +1,8 @@
 {
-  "presets": [ "@babel/env" ],
+  "presets": [ "@babel/env", "@babel/helper-annotate-as-pure" ],
   "plugins": [
     ["lodash", {
-      "id": ["ramda", "ramda-adjunct", "recompose"]
+      "id": ["ramda", "ramda-adjunct", "recompose", "redux"]
     }]
   ]
 }

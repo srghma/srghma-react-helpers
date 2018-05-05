@@ -2,6 +2,11 @@ import * as fs from 'fs'
 import * as R from 'ramda'
 import babel from 'rollup-plugin-babel'
 
+// XXX:
+// its required that peers were installed before running build,
+// because babel-plugin-lodash will not be able to make right paths then
+// use `npm run prepare` to install them
+
 const pkg = require('./package.json')
 
 const babelrc = JSON.parse(fs.readFileSync('./.babelrc'))
