@@ -1,14 +1,15 @@
 {
   "name": "srghma-react-helpers",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "",
   "author": "Sergey Homa <srghma@gmail.com>",
   "files": [
     "es",
-    "cjs",
+    "lib",
     "umd"
   ],
-  "main": "cjs/index.js",
+  "sideEffects": false,
+  "main": "lib/index.js",
   "browser": "umd/index.js",
   "module": "es/index.js",
   "scripts": {
@@ -18,8 +19,8 @@
     "precommit": "lint-staged",
     "build": "npm run build:es && npm run build:commonjs",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir cjs",
-    "clean": "rimraf es/ cjs/ umd/",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "clean": "rimraf es/ lib/ umd/",
     "lint": "eslint --ignore-path .eslintignore .",
     "lint:fix": "eslint --ignore-path .eslintignore --fix .",
     "format:base": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write",
