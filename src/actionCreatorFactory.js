@@ -9,7 +9,7 @@ function actionCreatorFactory(scope, type) {
       payload,
     }
   }
-  f.type = t
+  f.type = t // intended to be used together with createReducer function
   return f
 }
 
