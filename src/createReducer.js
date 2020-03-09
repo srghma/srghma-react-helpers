@@ -12,7 +12,7 @@
 // }
 //
 // const rootReducer = {
-//   page1: createReducer(page1ActionsMap, page1InitialState)
+//   page1: createReducer(actionsMap, initialState)
 // }
 
 function createReducer(declaration, initialValue) {
